@@ -3,8 +3,58 @@
 <head>
     <title>Numberfall</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        #game-title {
+            text-align: center;
+            margin-top: 1em;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            letter-spacing: 1px;
+        }
+        #startbutton {
+            border: 0;
+            line-height: 2.5;
+            display: block;
+            width: fit-content;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            margin: 0 auto;
+            font-size: 2rem;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            border-radius: 10px;
+            background-color: rgb(108, 71, 255);
+            background-image: linear-gradient(
+                to top left,
+                rgb(0 0 0 / 0.2),
+                rgb(0 0 0 / 0.2) 30%,
+                transparent
+            );
+            box-shadow:
+                inset 2px 2px 3px rgb(255 255 255 / 0.6),
+                inset -2px -2px 3px rgb(0 0 0 / 0.6);
+        }
+
+        #startbutton:hover {
+            background-color: rgb(98, 0, 255);
+        }
+
+        #startbutton:active {
+            box-shadow:
+                inset -2px -2px 3px rgb(255 255 255 / 0.6),
+                inset 2px 2px 3px rgb(0 0 0 / 0.6);
+        }
+    </style>
 </head>
-<body>
-<h1>Welcome to Numberfall!</h1>
+<body style="display:flex; flex-direction:column; min-height:100vh;">
+    <main style="flex:1;">
+        <h1 id="game-title">Welcome to Numberfall!</h1>
+        <a href = "/difficulty" id="startbutton">Start Game</a>
+    </main>
+    <footer>
+        <p>&copy; 2026 Gabe · Numberfall · <a href="https://github.com/gabea5935738/Numberfall" target="_blank" rel="noopener noreferrer" style="color: black;">Github</a></p>
+    </footer>
 </body>
 </html>
