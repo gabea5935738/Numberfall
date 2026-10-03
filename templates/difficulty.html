@@ -5,6 +5,28 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-
+        <h2>Select Difficulty Level</h2>
+        <form method="POST" autocomplete="off">
+            <label>
+                <input type="radio" name="difficulty" value="easy">
+                Easy (1-10, 3 guesses)
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="difficulty" value="medium">
+                Medium (1-50, 5 guesses)
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="difficulty" value="hard">
+                Hard (1-100, 6 guesses)
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="difficulty" value="custom">
+                Custom
+            </label>
+            <button type="submit">Start Game</button>
+        </form>
     </body>
 </html>
